@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+
+		<link rel="stylesheet" href="menu.css" />
+		<link rel="stylesheet" href="projects.css" />
+		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="scrollreveal.css" />
+		<title>The Rogan Gear</title>
+	</head>
+	<body>
+		<!-- Navbar -->
+		<header id="header" class="navbar">
+			<!-- Logo -->
+			<a id="logo" href="index.html">
+				<!-- Logo content -->
+				<div class="logo-container">
+					<img class="logo-image" src="/images/svg/TRG-W.svg" alt="logo" />
+				</div>
+			</a>
+
+			<!-- Menu -->
+			<nav id="nav">
+				<button
+					aria-label="Open Menu"
+					id="btn-mobile"
+					aria-controls="menu"
+					aria-haspopup="true"
+					aria-expanded="false"
+				>
+					<!-- Hamburger menu -->
+					<span id="hamburger"></span>
+				</button>
+				<ul id="menu" role="menu">
+					<li>
+						<a class="underline-link" href="#showcase">Home</a>
+					</li>
+
+					<li><a class="underline-link" href="#equipment">Equipment</a></li>
+					<li><a class="underline-link" href="#contact">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+		<!-- Contact ---------------------------------------------->
+		<section id="contact" class="section contact">
+			<div class="container-new">
+				<div class="col-15"></div>
+				<div class="col-75">
+					<h1 class="showcase-title">Contact</h1>
+					<p class="paragraph-medium showcase-text">
+						Leave your message bellow. We'll be in touch soon.
+					</p>
+
+					<!-- Form ------------->
+					<form
+						action="/thanks.html"
+						class="form"
+						name="contact"
+						method="POST"
+						data-netlify="true"
+						netlify-honeypot="bot-field"
+					>
+						<input
+							class="hidden"
+							type="hidden"
+							name="contact"
+							value="contact"
+						/>
+						<p class="hidden">
+							<label
+								>Don’t fill this out if you’re human: <input name="bot-field"
+							/></label>
+						</p>
+
+						<input
+							type="text"
+							name="name"
+							maxlength="256"
+							required
+							placeholder="Your name"
+						/>
+						<input
+							type="email"
+							name="email"
+							maxlength="256"
+							required
+							placeholder="Email address"
+						/>
+						<textarea
+							name="message"
+							maxlength="5000"
+							required
+							placeholder="Leave you message"
+						></textarea>
+						<button type="submit" class="btn call-to-action red">SEND</button>
+					</form>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer ---------------------------------------------->
+		<section id="footer" class="section footer">
+			<div class="container-new">
+				<div class="col-25">
+					<p><a href="index.html">The Rogan Gear</a></p>
+				</div>
+				<div class="col-75">
+					<ul class="footer-menu">
+						<li>
+							<a class="underline-link" href="#showcase">Home</a>
+						</li>
+						<li>
+							<a class="underline-link" href="#equipment">Equipment</a>
+						</li>
+						<li><a class="underline-link" href="contact.html">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="container-new footer-copyright">
+				<div class="col-25"></div>
+				<div class="col-75">
+					<p class="p-copyright">
+						© 2021 The Rogan Gear. All rights reserved. Made by
+						<a href="https://tneves.com/">Thiago Neves</a>.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<script src="menu.js"></script>
+		<script src="scroll.js"></script>
+		<script src="form.js"></script>
+		<script src="scrollreveal.js"></script>
+	</body>
+</html>
