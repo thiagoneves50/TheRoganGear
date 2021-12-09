@@ -7,6 +7,7 @@
 
 :root {
 	--dark-color: #181818;
+	--light-dark-color: #333;
 	--primary-color: #f3e3cf;
 	--secondary-color: #f2f2f2;
 	--accent-color: #f9423a;
@@ -58,7 +59,7 @@ h1 {
 h2 {
 	max-width: 690px;
 	margin-top: -10px;
-	margin-bottom: 4rem;
+	margin-bottom: 2rem;
 	font-size: 2.246rem;
 	line-height: 1.25;
 	font-weight: 700;
@@ -151,6 +152,9 @@ ul {
 	width: 100%;
 	padding: 100px 3% 60px;
 }
+.section.equipment {
+	padding: 30px 3% 30px;
+}
 
 .btn {
 	margin-top: 20px;
@@ -173,20 +177,27 @@ ul {
 .btn.call-to-action {
 	padding: 20px 36px;
 }
-.btn.call-to-action.blue {
+.btn.btn-medium {
+	padding: 10px 16px;
+}
+.btn.blue {
 	background-color: var(--accent-alt-color);
 	color: var(--dark-color);
 }
-.btn.call-to-action:hover.blue {
+.btn.yellow {
+	background-color: #ffd814;
+	color: var(--dark-color);
+}
+.btn:hover.blue {
 	background-color: var(--accent-alt-color-hover);
 	color: var(--dark-color);
 }
-
-.btn.case-study {
-	padding: 10px 18px;
+.btn:hover.yellow {
+	background-color: #f2cb0b;
+	color: var(--dark-color);
 }
 
-.btn:hover {
+.btn.red:hover {
 	background: var(--accent-color-rover);
 	color: #fff;
 	transform: translateY(-1px);
@@ -305,6 +316,13 @@ ul {
 	margin-bottom: 1rem;
 }
 
+/* Divider */
+.divider {
+	width: 100%;
+	height: 5rem;
+	background-color: var(--light-dark-color);
+}
+
 /* Showcase =================================================== */
 
 #showcase {
@@ -352,7 +370,7 @@ ul {
 /* Equipment ============================================ */
 
 .equipment {
-	background-color: var(--dark-color);
+	background-color: var(--light-dark-color);
 }
 /* 
 .about p {
@@ -361,7 +379,7 @@ ul {
 
 .equipment-card {
 	box-shadow: 0 -2px 10px rgba(0, 0, 0, 1);
-	padding: 2rem 3vw;
+	/* padding: 2rem 3vw; */
 	background-color: white;
 	color: var(--dark-color);
 	border-radius: 5px;
@@ -376,10 +394,14 @@ ul {
 
 .equipment-image {
 	width: 50%;
+	padding: 2rem 3vw;
 }
 
 .equipment-text {
 	width: 50%;
+	padding: 2rem 3vw;
+	background-color: #000;
+	color: #fff;
 }
 
 .equipment .amazon-img {
@@ -566,6 +588,15 @@ textarea:focus {
 }
 
 /* End Contact */
+/* Thanks page ================================================ */
+
+.showcase.thanks {
+	align-items: center;
+	background-color: #000;
+}
+
+/* End Thanks page */
+
 /* Responsive ================================================ */
 
 @media (max-width: 991px) {
@@ -605,6 +636,9 @@ textarea:focus {
 		font-size: 1.5rem;
 		margin-bottom: 1.5rem;
 	}
+	.divider {
+		height: 3rem;
+	}
 }
 
 @media (max-width: 767px) {
@@ -627,9 +661,11 @@ textarea:focus {
 	.equipment-image {
 		width: 100%;
 		margin-bottom: 40px;
+		padding: 2rem;
 	}
 	.equipment-text {
 		width: 100%;
+		padding: 2rem;
 	}
 }
 

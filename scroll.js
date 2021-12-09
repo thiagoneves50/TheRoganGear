@@ -1,19 +1,39 @@
-// Seleciona links internos
-const intLinks = document.querySelectorAll("#menu a");
-// select btn on showcase
-const btnToProjects = document.querySelector(".btn-to-projects");
-// select footer menu links
-const footerLinks = document.querySelectorAll("#footer ul a");
+// Seleciona menu links
+const menuLinks = Array.prototype.slice.call(
+	document.querySelectorAll("#menu a")
+);
+// remove the Contact link (last link)
+menuLinks.pop();
 
-intLinks.forEach((link) => {
+// select btn on showcase
+const equipmentLinks = document.querySelectorAll(".tag a");
+// select link on showcase
+const showcaseLinkEquipments = document.querySelector(
+	"#showcase-link-equipments"
+);
+// select footer menu links
+const footerLinks = Array.prototype.slice.call(
+	document.querySelectorAll("#footer ul a")
+);
+// remove the Contact link (last link)
+footerLinks.pop();
+
+// add scroll to menu links
+menuLinks.forEach((link) => {
 	link.addEventListener("click", scrollToID);
 });
 
+// add scroll to equipment links
+equipmentLinks.forEach((link) => {
+	link.addEventListener("click", scrollToID);
+});
+
+// add scroll to footer links
 footerLinks.forEach((link) => {
 	link.addEventListener("click", scrollToID);
 });
 
-btnToProjects.addEventListener("click", scrollToProjects);
+showcaseLinkEquipments.addEventListener("click", scrollToProjects);
 
 // Smooth scrolling
 function scrollToID(event) {
@@ -23,13 +43,11 @@ function scrollToID(event) {
 	target.scrollIntoView({
 		behavior: "smooth",
 	});
-	// fecha o menu
-	// btnMobile.click();
 }
 
 function scrollToProjects(event) {
 	event.preventDefault();
-	const target = document.querySelector("#projects");
+	const target = document.querySelector("#showcase-link-equipments");
 	target.scrollIntoView({
 		behavior: "smooth",
 	});
